@@ -1,10 +1,8 @@
 def merge_unique_ids(active_users: list, new_users: list) -> list:
-    seen = set()
     unique_ids = []
     
     for user_id in active_users + new_users:
-        if user_id not in seen:
-            seen.add(user_id)
+        if user_id not in unique_ids:
             unique_ids.append(user_id)
     
     return unique_ids
